@@ -1,0 +1,21 @@
+{
+  "name": "@melodies/service",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "serve": "nodemon"
+  },
+  "peerDependencies": {
+    "@types/node": ">=16",
+    "typescript": ">=4"
+  },
+  "dependencies": {
+    "@melodies/api": "workspace:api",
+    "@mskelton/tsconfig": "^1.0.2",
+    "apollo-server": "^2.25.2",
+    "graphql": "^15.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.1.0"
+  }
+}

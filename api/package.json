@@ -1,0 +1,4 @@
+{
+  "name": "@melodies/api",
+  "main": "src/index.ts"
+}
