@@ -1,3 +1,22 @@
 {
-  "name": "@melodies/web"
+  "name": "@melodies/web",
+  "scripts": {
+    "build": "snowpack build",
+    "serve": "snowpack dev"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.6.5",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "framer-motion": "^4"
+  },
+  "devDependencies": {
+    "@snowpack/plugin-react-refresh": "^2.5.0",
+    "@types/snowpack-env": "^2.3.4",
+    "snowpack": "^3.8.1"
+  }
 }
