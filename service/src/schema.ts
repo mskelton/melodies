@@ -22,7 +22,9 @@ export const schema = gql`
     id: String
     title: String
     description: String
+    image: String
     songs: [Song]
+    songCount: Int
   }
 
   type Query {

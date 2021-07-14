@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
+import { Route, Routes } from "react-router-dom"
+import Providers from "~/components/Providers"
+import { CollectionsList } from "~/routes/collections/CollectionList"
 
 export function App() {
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    const timer = setTimeout(() => setCount(count + 1), 1000)
-    return () => clearTimeout(timer)
-  }, [count, setCount])
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Page has been open for <code>{count}</code> seconds.
-        </p>
-      </header>
-    </div>
+    <Providers>
+      <Routes>
+        <Route element={<CollectionsList />} path="/" />
+        {/* <Route element={<About />} path="about" /> */}
+      </Routes>
+    </Providers>
   )
 }

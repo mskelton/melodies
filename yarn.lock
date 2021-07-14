@@ -355,7 +355,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.7.6":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.0, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.14.5, @babel/runtime@npm:^7.14.6, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.7.6":
   version: 7.14.6
   resolution: "@babel/runtime@npm:7.14.6"
   dependencies:
@@ -1446,7 +1446,11 @@ __metadata:
     "@types/snowpack-env": ^2.3.4
     framer-motion: ^4.1.17
     graphql: ^15.5.1
+    i18next: ^20.3.3
+    i18next-async-backend: ^1.0.1
+    i18next-browser-languagedetector: ^6.1.2
     react-dom: ^17.0.2
+    react-i18next: ^11.11.2
     react-router: next
     react-router-dom: next
     snowpack: ^3.8.1
@@ -5195,6 +5199,15 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"html-parse-stringify@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "html-parse-stringify@npm:3.0.1"
+  dependencies:
+    void-elements: 3.1.0
+  checksum: 26de837d271ef79e8c54fc50c17ab1f870b539202d2a593905d3933484bd5b9c30afe57d23a7e0468ef370573e6c0e83b8d8e81bd803858a27ff5acbaa1d9032
+  languageName: node
+  linkType: hard
+
 "htmlparser2@npm:^6.1.0":
   version: 6.1.0
   resolution: "htmlparser2@npm:6.1.0"
@@ -5315,6 +5328,33 @@ fsevents@~2.1.2:
   dependencies:
     ms: ^2.0.0
   checksum: 4a08769434132a229a6153e77c869a9fe7132dc003d90119d54958e7b75feb65a3c4eca19fb18921568878ac455b6f399013279ad33248d94bd61a25def1fdda
+  languageName: node
+  linkType: hard
+
+"i18next-async-backend@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "i18next-async-backend@npm:1.0.1"
+  peerDependencies:
+    i18next: ">=20"
+  checksum: 1d38fc2fe1e44612b24b63501938c0234de9e5b6d8dee265bba8b9b80892a3e1fbd3930f80d4a8e8e06f5b1905d7a72d7da143e47a5d9ece1ca3949584d503d4
+  languageName: node
+  linkType: hard
+
+"i18next-browser-languagedetector@npm:^6.1.2":
+  version: 6.1.2
+  resolution: "i18next-browser-languagedetector@npm:6.1.2"
+  dependencies:
+    "@babel/runtime": ^7.14.6
+  checksum: b5e8b79040e92cf767aa98375b45e9534feb32f7794ef3c572659abafde571f51c77115a1db7fa9a0707601d393a52bffd686e0b0df1c84332f90525ee7a30d6
+  languageName: node
+  linkType: hard
+
+"i18next@npm:^20.3.3":
+  version: 20.3.3
+  resolution: "i18next@npm:20.3.3"
+  dependencies:
+    "@babel/runtime": ^7.12.0
+  checksum: 801c25c0719be27948bfe000ddf3bd70629c51663ed9ebba666891b4407a71bb538d1f132ad5674e9b6fd351dd4c5adab1cba7e4182a21823d8d72ee2f118485
   languageName: node
   linkType: hard
 
@@ -7513,6 +7553,19 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"react-i18next@npm:^11.11.2":
+  version: 11.11.2
+  resolution: "react-i18next@npm:11.11.2"
+  dependencies:
+    "@babel/runtime": ^7.14.5
+    html-parse-stringify: ^3.0.1
+  peerDependencies:
+    i18next: ">= 19.0.0"
+    react: ">= 16.8.0"
+  checksum: a0c361c3c1f2a4a67387a2e8c0525a03dfbacd744dda0efbce598b2078a2e872d1ccca45aabc495b87b1afe6502069dd1af77de96902450f7c69eb060d929622
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.7.0, react-is@npm:^16.8.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -9029,6 +9082,13 @@ typescript@^4.3.5:
   bin:
     vm2: bin/vm2
   checksum: 2bd3204247a9c3766a0b87bccf8cee780f1f1547c6e461047724a05296c7ae991706122b638d305676f360d4d14bda12e330de5e31f37d7ecfa139fbdf2123e7
+  languageName: node
+  linkType: hard
+
+"void-elements@npm:3.1.0":
+  version: 3.1.0
+  resolution: "void-elements@npm:3.1.0"
+  checksum: ed0f78f1434f4a5588078861815b3ebdbb0913e5129c3f1b37a3408a9f7c772d28702846316734e758ba40cad4e85371e50160d92d7968b86f12bf7227a1c6c9
   languageName: node
   linkType: hard
 
