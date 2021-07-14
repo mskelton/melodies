@@ -4,7 +4,6 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "jsx": "react",
-    "module": "esnext",
     "moduleResolution": "node",
     "skipLibCheck": true,
     "strict": true,
