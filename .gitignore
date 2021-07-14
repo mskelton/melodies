@@ -7,3 +7,5 @@
 
 node_modules
 lib/
+.vscode/*
+!.vscode/tasks.json

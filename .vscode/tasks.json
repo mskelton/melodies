@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start service",
+      "detail": "nodemon",
+      "type": "npm",
+      "group": "build",
+      "path": "service/",
+      "script": "serve",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "clear": true
+      }
+    },
+    {
+      "label": "Start web app",
+      "detail": "snowpack dev",
+      "type": "npm",
+      "group": "build",
+      "path": "web/",
+      "script": "serve",
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": {
+        "clear": true
+      }
+    },
+    {
+      "label": "Start development",
+      "dependsOn": ["Start service", "Start web app"],
+      "dependsOrder": "parallel",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
