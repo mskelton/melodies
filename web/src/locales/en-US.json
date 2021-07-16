@@ -5,7 +5,11 @@
     "image-alt": "Collection image"
   },
   "nav": {
+    "app-name": "Melodies",
     "collections": "Collections",
+    "open-github-repo": "Open on GitHub",
+    "color-switch-label_dark": "Switch to light mode",
+    "color-switch-label_light": "Switch to dark mode",
     "songs": "Songs",
     "favorites": "Favorites"
   }

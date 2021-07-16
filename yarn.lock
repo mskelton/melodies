@@ -1449,6 +1449,7 @@ __metadata:
     i18next: ^20.3.3
     react-dom: ^17.0.2
     react-i18next: ^11.11.2
+    react-icons: ^4.2.0
     react-router: next
     react-router-dom: next
     snowpack: ^3.8.1
@@ -7543,6 +7544,15 @@ fsevents@~2.1.2:
     i18next: ">= 19.0.0"
     react: ">= 16.8.0"
   checksum: a0c361c3c1f2a4a67387a2e8c0525a03dfbacd744dda0efbce598b2078a2e872d1ccca45aabc495b87b1afe6502069dd1af77de96902450f7c69eb060d929622
+  languageName: node
+  linkType: hard
+
+"react-icons@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "react-icons@npm:4.2.0"
+  peerDependencies:
+    react: "*"
+  checksum: 0052e25c6aacab93da3328ab856e4971214dce082de4bce857801802903366c7a8f9f490fe02ecd4ce181512b7b55cac12d6273c3c8dccc0e3b71b30dfd28256
   languageName: node
   linkType: hard
 

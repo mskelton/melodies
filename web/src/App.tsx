@@ -1,7 +1,7 @@
 import React from "react"
 import { Route, Routes } from "react-router-dom"
-import { Nav } from "~/chrome/Nav"
 import { PageContent } from "~/chrome/PageContent"
+import { Nav } from "~/chrome/nav/Nav"
 import Providers from "~/components/Providers"
 import { CollectionsList } from "~/routes/collections/CollectionList"
 
@@ -13,7 +13,6 @@ export function App() {
       <PageContent>
         <Routes>
           <Route element={<CollectionsList />} path="/" />
-          {/* <Route element={<About />} path="about" /> */}
         </Routes>
       </PageContent>
     </Providers>
