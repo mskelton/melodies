@@ -14,9 +14,9 @@ import { CollectionSummary } from "./useCollections"
 
 export function CollectionCard({ collection }: CollectionCardProps) {
   const [t] = useTranslation("collection-list")
-  const contentBg = useColorModeValue("gray.50", "gray.700")
+  const contentBg = useColorModeValue("white", "gray.700")
   const countColor = useColorModeValue("gray.500", "gray.400")
-  const descriptionColor = useColorModeValue("gray.600", "gray.400")
+  const descriptionColor = useColorModeValue("gray.500", "gray.400")
 
   return (
     <LinkBox
