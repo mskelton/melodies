@@ -33,6 +33,7 @@ export function Nav() {
           fontSize="xl"
           href="https://github.com/mskelton/melodies"
           icon={<FaGithub />}
+          target="_blank"
         />
 
         <ColorModeSwitcher />
