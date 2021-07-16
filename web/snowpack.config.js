@@ -11,4 +11,11 @@ module.exports = {
     src: "/dist",
   },
   plugins: ["@snowpack/plugin-react-refresh"],
+  routes: [
+    {
+      dest: "/index.html",
+      match: "routes",
+      src: ".*",
+    },
+  ],
 }
