@@ -1,13 +1,27 @@
-import { Box, Image, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Heading,
+  Image,
+  LinkBox,
+  LinkOverlay,
+  Text,
+} from "@chakra-ui/react"
 import React from "react"
 import { useTranslation } from "react-i18next"
+import { Link } from "react-router-dom"
 import { CollectionSummary } from "./useCollections"
 
 export function CollectionCard({ collection }: CollectionCardProps) {
-  const [t] = useTranslation("collections")
+  const [t] = useTranslation("collection-list")
 
   return (
-    <Box borderRadius="lg" borderWidth="1px" maxW="sm" overflow="hidden">
+    <LinkBox
+      as="section"
+      borderRadius="lg"
+      borderWidth="1px"
+      maxW="sm"
+      overflow="hidden"
+    >
       <Image alt={t("image-alt")} src={collection.image} w="100%" />
 
       <Box p="4">
@@ -21,15 +35,17 @@ export function CollectionCard({ collection }: CollectionCardProps) {
           {t("song-count", { count: collection.songCount })}
         </Box>
 
-        <Box as="h4" fontWeight="semibold" isTruncated mb="2" mt="1">
-          {collection.title}
-        </Box>
+        <Heading fontWeight="semibold" isTruncated mb="2" mt="1" size="md">
+          <LinkOverlay as={Link} to={`/collections/${collection.id}`}>
+            {collection.title}
+          </LinkOverlay>
+        </Heading>
 
         <Text color="gray.600" fontSize="sm" noOfLines={2}>
           {collection.description}
         </Text>
       </Box>
-    </Box>
+    </LinkBox>
   )
 }
 

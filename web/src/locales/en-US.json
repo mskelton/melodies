@@ -1,16 +1,19 @@
 {
-  "collections": {
+  "collection-list": {
     "song-count": "{{count, number}} song",
     "song-count_plural": "{{count, number}} songs",
+    "error-loading": "An error ocurred when loading collections. Please refresh your page to try again.",
     "image-alt": "Collection image"
   },
   "nav": {
     "app-name": "Melodies",
-    "collections": "Collections",
     "open-github-repo": "Open on GitHub",
     "color-switch-label_dark": "Switch to light mode",
     "color-switch-label_light": "Switch to dark mode",
-    "songs": "Songs",
-    "favorites": "Favorites"
+    "links": {
+      "collections": "Collections",
+      "songs": "Songs",
+      "home": "Home"
+    }
   }
 }

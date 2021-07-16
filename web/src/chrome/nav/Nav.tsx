@@ -17,9 +17,9 @@ export function Nav() {
         </Heading>
 
         <HStack spacing="3">
-          <NavButton to="/">{t("collections")}</NavButton>
-          <NavButton to="/songs">{t("songs")}</NavButton>
-          <NavButton to="/favorites">{t("favorites")}</NavButton>
+          <NavButton to="/">{t("links.home")}</NavButton>
+          <NavButton to="/collections">{t("links.collections")}</NavButton>
+          <NavButton to="/songs">{t("links.songs")}</NavButton>
         </HStack>
       </Flex>
 
