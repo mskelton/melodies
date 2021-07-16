@@ -5,6 +5,7 @@ import {
   LinkBox,
   LinkOverlay,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react"
 import React from "react"
 import { useTranslation } from "react-i18next"
@@ -13,6 +14,9 @@ import { CollectionSummary } from "./useCollections"
 
 export function CollectionCard({ collection }: CollectionCardProps) {
   const [t] = useTranslation("collection-list")
+  const contentBg = useColorModeValue("gray.50", "gray.700")
+  const countColor = useColorModeValue("gray.500", "gray.400")
+  const descriptionColor = useColorModeValue("gray.600", "gray.400")
 
   return (
     <LinkBox
@@ -24,9 +28,9 @@ export function CollectionCard({ collection }: CollectionCardProps) {
     >
       <Image alt={t("image-alt")} src={collection.image} w="100%" />
 
-      <Box p="4">
+      <Box bg={contentBg} p="4">
         <Box
-          color="gray.500"
+          color={countColor}
           fontSize="xs"
           fontWeight="semibold"
           letterSpacing="wide"
@@ -41,7 +45,7 @@ export function CollectionCard({ collection }: CollectionCardProps) {
           </LinkOverlay>
         </Heading>
 
-        <Text color="gray.600" fontSize="sm" noOfLines={2}>
+        <Text color={descriptionColor} fontSize="sm" noOfLines={2}>
           {collection.description}
         </Text>
       </Box>
