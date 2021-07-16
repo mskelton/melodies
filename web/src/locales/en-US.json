@@ -1,0 +1,12 @@
+{
+  "collections": {
+    "song-count": "{{count, number}} song",
+    "song-count_plural": "{{count, number}} songs",
+    "image-alt": "Collection image"
+  },
+  "nav": {
+    "collections": "Collections",
+    "songs": "Songs",
+    "favorites": "Favorites"
+  }
+}

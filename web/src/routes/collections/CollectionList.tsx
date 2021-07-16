@@ -1,4 +1,4 @@
-import { Alert, AlertIcon, SimpleGrid, Spinner } from "@chakra-ui/react"
+import { Alert, AlertIcon, Grid, Spinner } from "@chakra-ui/react"
 import React from "react"
 import { CollectionCard } from "./CollectionCard"
 import { useCollections } from "./useCollections"
@@ -14,10 +14,10 @@ export function CollectionsList() {
       There was an error processing your request
     </Alert>
   ) : data ? (
-    <SimpleGrid minChildWidth="120px" spacing="40px">
+    <Grid gap={6} templateColumns="repeat(auto-fill, minmax(200px, 1fr))">
       {data.collections.map((collection) => (
         <CollectionCard key={collection.id} collection={collection} />
       ))}
-    </SimpleGrid>
+    </Grid>
   ) : null
 }

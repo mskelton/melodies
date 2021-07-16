@@ -1,17 +1,17 @@
 import i18next from "i18next"
-import AsyncBackend from "i18next-async-backend"
-import BrowserLanguageDetector from "i18next-browser-languagedetector"
 import { initReactI18next } from "react-i18next"
-import enUS from "~/locales/en-US/translation.json"
+import enUS from "~/locales/en-US.json"
 
-const resources = {
-  // "en-US": import("locales/en-US/translation.json"),
-}
-
-i18next
-  .use(AsyncBackend)
-  .use(initReactI18next)
-  .use(BrowserLanguageDetector)
-  .init({
-    backend: { resources },
-  })
+i18next.use(initReactI18next).init({
+  interpolation: {
+    escapeValue: false,
+    format(value, format, lng) {
+      return format === "number"
+        ? new Intl.NumberFormat(lng).format(value)
+        : value
+    },
+  },
+  lng: "en-US",
+  resources: { "en-US": enUS },
+  supportedLngs: ["en-US"],
+})
