@@ -1,1 +1,1 @@
-web: yarn workspace service start
+web: yarn workspace @melodies/service start
