@@ -1777,6 +1777,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@koa/router@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "@koa/router@npm:10.0.0"
+  dependencies:
+    debug: ^4.1.1
+    http-errors: ^1.7.3
+    koa-compose: ^4.1.0
+    methods: ^1.1.2
+    path-to-regexp: ^6.1.0
+  checksum: bbc41166758ce41573aca9a008cf95337d3bfcb88ae2f2cc7f13328408232769670991ebcb1227371a924c05fff68a5071fc1d57ce7deb1d86dc9c9e6beced90
+  languageName: node
+  linkType: hard
+
 "@melodies/api@workspace:api":
   version: 0.0.0-use.local
   resolution: "@melodies/api@workspace:api"
@@ -1802,8 +1815,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@melodies/service@workspace:service"
   dependencies:
+    "@koa/router": ^10.0.0
     "@melodies/api": "workspace:api"
+    "@melodies/web": "workspace:web"
     "@mskelton/tsconfig": ^1.0.2
+    "@types/koa__router": ^8.0.7
     apollo-server-koa: ^3.0.1
     graphql: ^15.5.1
     koa: ^2.13.1
@@ -1811,6 +1827,7 @@ __metadata:
     ts-node: ^10.1.0
   peerDependencies:
     "@types/node": ">=16"
+    react-dom: ">=17"
     typescript: ">=4"
   languageName: unknown
   linkType: soft
@@ -1829,7 +1846,6 @@ __metadata:
     framer-motion: ^4.1.17
     graphql: ^15.5.1
     i18next: ^20.3.3
-    react-dom: ^17.0.2
     react-i18next: ^11.11.2
     react-icons: ^4.2.0
     react-router: next
@@ -1837,6 +1853,7 @@ __metadata:
     snowpack: ^3.8.1
   peerDependencies:
     react: ">=17"
+    react-dom: ">=17"
   languageName: unknown
   linkType: soft
 
@@ -2587,6 +2604,15 @@ __metadata:
   dependencies:
     "@types/koa": "*"
   checksum: 63a9251de27107b32d73fb9bdcaab277e4adf9bb17e71ff863682ca3b1fd04c4d74229b59f3872e34c2a837fd94e7a6b511b1175dc0eb42bef25649619559ecb
+  languageName: node
+  linkType: hard
+
+"@types/koa__router@npm:^8.0.7":
+  version: 8.0.7
+  resolution: "@types/koa__router@npm:8.0.7"
+  dependencies:
+    "@types/koa": "*"
+  checksum: dba646fcee4ed3a7648ceb9aa507f03cccaa41bcb90f307312f0c8b329c743c89854fee47d9519538f06b00828c61491bcf8ffb50b0517ef36cc55dd6edaa13e
   languageName: node
   linkType: hard
 
@@ -5629,7 +5655,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"http-errors@npm:^1.6.3":
+"http-errors@npm:^1.6.3, http-errors@npm:^1.7.3":
   version: 1.8.0
   resolution: "http-errors@npm:1.8.0"
   dependencies:
@@ -6770,8 +6796,9 @@ fsevents@~2.1.2:
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-sort: ^1.5.0
     history: ^5.0.0
-    prettier: ^2.3.2
+    prettier: 2.3.2
     react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.3.5
   languageName: unknown
   linkType: soft
@@ -6794,6 +6821,13 @@ fsevents@~2.1.2:
   version: 3.1.6
   resolution: "meriyah@npm:3.1.6"
   checksum: 5cc6ec420c42b6c5484cd0fe8e1d2c00efb6ba822fafa79bf7151f5304292cb07abc83128395f2cabce084abce368429f848dd2bd01147041ba184ef11628435
+  languageName: node
+  linkType: hard
+
+"methods@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "methods@npm:1.1.2"
+  checksum: 450e4ea0fd4a0f3de8c0593d753c7d6c8f2ee49766f5ef35c68cc2ac41699d5e295b7d6330fc2b7271b8569a07857e3eb0b5df0599a353c5808265b4b5066168
   languageName: node
   linkType: hard
 
@@ -7658,6 +7692,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"path-to-regexp@npm:^6.1.0":
+  version: 6.2.0
+  resolution: "path-to-regexp@npm:6.2.0"
+  checksum: 4116de71f5453163910347f199ab28fdd07f4053ed88093acb42dc044a2e5e7d9e18379e81e8d5d982d1b88291be3666e56be34a0741298673248fd21e3c1c16
+  languageName: node
+  linkType: hard
+
 "path-type@npm:^4.0.0":
   version: 4.0.0
   resolution: "path-type@npm:4.0.0"
@@ -7862,7 +7903,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.3.2":
+"prettier@npm:2.3.2":
   version: 2.3.2
   resolution: "prettier@npm:2.3.2"
   bin:
