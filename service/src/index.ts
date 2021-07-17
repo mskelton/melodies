@@ -3,5 +3,5 @@ import { resolvers } from "./resolvers"
 import { schema as typeDefs } from "./schema"
 
 new ApolloServer({ resolvers, typeDefs })
-  .listen()
+  .listen({ port: process.env.PORT || 4000 })
   .then(({ url }) => console.log(`🚀 Server ready at ${url}`))
