@@ -4,6 +4,7 @@
   "license": "ISC",
   "scripts": {
     "format": "prettier --write .",
+    "heroku-postbuild": "yarn ts",
     "lint": "eslint .",
     "ts": "tsc -b"
   },
