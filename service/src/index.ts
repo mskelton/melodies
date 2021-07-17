@@ -1,5 +1,6 @@
-import * as Koa from "koa"
-import { startApolloServer } from "./startApolloServer"
+import Koa from "koa"
+import { startApolloServer } from "./apollo/server"
+import { router } from "./router"
 
 async function main() {
   const app = new Koa()
@@ -8,7 +9,8 @@ async function main() {
 
   app
     .use(server.getMiddleware())
-    // .use()
+    .use(router.routes())
+    .use(router.allowedMethods())
     .listen({ port }, () => {
       console.log(`🚀 Server ready at http://localhost:${port}`)
     })
