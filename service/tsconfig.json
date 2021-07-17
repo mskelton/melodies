@@ -1,8 +1,12 @@
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
+    "declarationDir": "lib",
+    "emitDeclarationOnly": false,
     "module": "commonjs",
-    "outDir": "lib"
+    "outDir": "dist",
+    "rootDir": "src",
+    "tsBuildInfoFile": "lib/tsconfig.tsbuildinfo"
   },
   "ts-node": {
     "transpileOnly": true
