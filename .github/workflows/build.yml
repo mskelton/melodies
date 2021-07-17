@@ -8,13 +8,26 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14.x
-          cache: yarn
       - run: yarn install --immutable
       - run: yarn prettier --check .
       - run: yarn lint
       - run: yarn ts
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - run: yarn install --immutable
+      - run: yarn ts
+      - name: Run e2e tests
+        run: |
+          yarn playwright install-deps chromium
+          yarn playwright install chromium
+          yarn test
   deploy:
-    needs: test
+    needs: [test, e2e]
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
