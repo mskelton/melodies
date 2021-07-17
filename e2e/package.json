@@ -1,0 +1,10 @@
+{
+  "name": "@melodies/e2e",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.12.3",
+    "expect-playwright": "^0.7.2"
+  }
+}
