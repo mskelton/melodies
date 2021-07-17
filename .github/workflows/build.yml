@@ -32,7 +32,7 @@ jobs:
         run: |
           yarn workspace @melodies/e2e playwright install-deps chromium
           yarn workspace @melodies/e2e playwright install chromium
-      - run: yarn test
+      - run: yarn workspace @melodies/e2e test
   deploy:
     needs: [lint, ts, e2e]
     if: github.ref == 'refs/heads/main'
