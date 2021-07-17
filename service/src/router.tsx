@@ -7,6 +7,7 @@ import { renderToString } from "react-dom/server"
 import { StaticRouter } from "react-router-dom/server"
 
 export const router = new Router()
+export const webPath = path.resolve(__dirname, "../../web")
 
 router.get("/", async (ctx) => {
   const app = renderToString(
@@ -15,7 +16,7 @@ router.get("/", async (ctx) => {
     </StaticRouter>
   )
 
-  const filePath = path.resolve(__dirname, "../../web/public/index.html")
+  const filePath = path.resolve(webPath, "public/index.html")
   const template = await fs.promises.readFile(filePath, "utf-8")
   const html = template.replace(
     '<div id="root"></div>',

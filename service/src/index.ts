@@ -1,6 +1,8 @@
 import Koa from "koa"
+import serve from "koa-static"
+import path from "path"
 import { startApolloServer } from "./apollo/server"
-import { router } from "./router"
+import { router, webPath } from "./router"
 
 async function main() {
   const app = new Koa()
@@ -11,6 +13,7 @@ async function main() {
     .use(server.getMiddleware())
     .use(router.routes())
     .use(router.allowedMethods())
+    .use(serve(path.join(webPath, "build")))
     .listen({ port }, () => {
       console.log(`🚀 Server ready at http://localhost:${port}`)
     })
