@@ -1,4 +1,4 @@
-import * as http from "http"
+import http from "http"
 
 function requestListener(_: http.IncomingMessage, res: http.ServerResponse) {
   res.writeHead(200, { "Content-Type": "text/plain" })

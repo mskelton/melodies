@@ -3,6 +3,7 @@
     "composite": true,
     "declaration": true,
     "emitDeclarationOnly": true,
+    "esModuleInterop": true,
     "jsx": "react",
     "moduleResolution": "node",
     "resolveJsonModule": true,

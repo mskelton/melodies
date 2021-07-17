@@ -13,5 +13,6 @@ node_modules
 !.vscode/tasks.json
 
 # Build outputs
-lib/
+build/
 dist/
+lib/
