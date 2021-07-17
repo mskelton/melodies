@@ -4,24 +4,35 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: mskelton/setup-yarn@main
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - run: yarn install --immutable --immutable-cache
       - run: yarn prettier --check .
       - run: yarn lint
   ts:
     runs-on: ubuntu-latest
     steps:
-      - uses: mskelton/setup-yarn@main
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - run: yarn install --immutable --immutable-cache
       - run: yarn ts
   e2e:
     runs-on: ubuntu-latest
     steps:
-      - uses: mskelton/setup-yarn@main
-      - run: yarn ts
-      - name: Run e2e tests
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - run: yarn install --immutable --immutable-cache
+      - name: Install Playwright deps
         run: |
-          yarn playwright install-deps chromium
-          yarn playwright install chromium
-          yarn test
+          yarn workspace @melodies/e2e playwright install-deps chromium
+          yarn workspace @melodies/e2e playwright install chromium
+      - run: yarn test
   deploy:
     needs: [lint, ts, e2e]
     if: github.ref == 'refs/heads/main'
