@@ -1,12 +1,8 @@
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
     "module": "esnext",
-    "outDir": "lib",
-    "paths": {
-      "~/*": ["./src/*"]
-    }
+    "outDir": "lib"
   },
   "include": ["src", "src/**/*.json"]
 }
