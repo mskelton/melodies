@@ -1,25 +1,21 @@
 name: Build
 on: push
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14.x
-      - run: yarn install --immutable
+      - uses: mskelton/setup-yarn@main
       - run: yarn prettier --check .
       - run: yarn lint
+  ts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mskelton/setup-yarn@main
       - run: yarn ts
   e2e:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14.x
-      - run: yarn install --immutable
+      - uses: mskelton/setup-yarn@main
       - run: yarn ts
       - name: Run e2e tests
         run: |
@@ -27,7 +23,7 @@ jobs:
           yarn playwright install chromium
           yarn test
   deploy:
-    needs: [test, e2e]
+    needs: [lint, ts, e2e]
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
