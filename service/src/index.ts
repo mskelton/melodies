@@ -10,10 +10,10 @@ async function main() {
   const server = await startApolloServer()
 
   app
+    .use(serve(path.join(webPath, "build")))
     .use(server.getMiddleware())
     .use(router.routes())
     .use(router.allowedMethods())
-    .use(serve(path.join(webPath, "build")))
     .listen({ port }, () => {
       console.log(`🚀 Server ready at http://localhost:${port}`)
     })

@@ -9,7 +9,7 @@ import { StaticRouter } from "react-router-dom/server"
 export const router = new Router()
 export const webPath = path.resolve(__dirname, "../../web")
 
-router.get("/", async (ctx) => {
+router.get("(.*)", async (ctx) => {
   const app = renderToString(
     <StaticRouter location={ctx.url}>
       <App />
