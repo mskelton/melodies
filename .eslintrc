@@ -3,5 +3,11 @@
     "@mskelton",
     "@mskelton/eslint-config/typescript",
     "@mskelton/eslint-config/react"
+  ],
+  "overrides": [
+    {
+      "files": "e2e/**",
+      "extends": "plugin:playwright/playwright-test"
+    }
   ]
 }

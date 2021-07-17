@@ -3,6 +3,7 @@
   "references": [
     { "path": "./api" },
     { "path": "./app" },
+    { "path": "./e2e" },
     { "path": "./service" },
     { "path": "./web" }
   ]
