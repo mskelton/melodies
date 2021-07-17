@@ -1,7 +1,17 @@
-import { ApolloServer } from "apollo-server"
-import { resolvers } from "./resolvers"
-import { schema as typeDefs } from "./schema"
+import * as Koa from "koa"
+import { startApolloServer } from "./startApolloServer"
 
-new ApolloServer({ resolvers, typeDefs })
-  .listen({ port: process.env.PORT || 4000 })
-  .then(({ url }) => console.log(`🚀 Server ready at ${url}`))
+async function main() {
+  const app = new Koa()
+  const port = process.env.PORT || 4000
+  const server = await startApolloServer()
+
+  app
+    .use(server.getMiddleware())
+    // .use()
+    .listen({ port }, () => {
+      console.log(`🚀 Server ready at http://localhost:${port}`)
+    })
+}
+
+main().catch(() => process.exit(1))
