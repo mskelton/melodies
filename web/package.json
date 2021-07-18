@@ -3,7 +3,7 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "snowpack build",
-    "serve": "snowpack dev"
+    "watch": "snowpack build --watch"
   },
   "peerDependencies": {
     "react": ">=17",
@@ -17,7 +17,9 @@
     "@melodies/api": "workspace:api",
     "framer-motion": "^4.1.17",
     "graphql": "^15.5.1",
+    "history": "^5.0.0",
     "i18next": "^20.3.3",
+    "react-helmet": "^6.1.0",
     "react-i18next": "^11.11.2",
     "react-icons": "^4.2.0",
     "react-router": "next",
