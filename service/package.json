@@ -20,6 +20,7 @@
     "history": "^5.0.0",
     "koa": "^2.13.1",
     "koa-static": "^5.0.0",
+    "react-helmet-async": "^1.0.9",
     "react-router-dom": "next"
   },
   "devDependencies": {
