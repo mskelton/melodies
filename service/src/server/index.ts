@@ -9,7 +9,7 @@ export async function createServer() {
   const server = await startApolloServer()
 
   app
-    .use(serve(path.join(__dirname, "../../web/build")))
+    .use(serve(path.join(__dirname, "../../../web/build")))
     .use(server.getMiddleware())
     .use(router.routes())
     .use(router.allowedMethods())
