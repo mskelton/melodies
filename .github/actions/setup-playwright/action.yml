@@ -5,7 +5,10 @@ runs:
   steps:
     - name: Install dependencies
       run: yarn install --immutable --immutable-cache
+      shell: bash
     - name: Install Playwright system dependencies
       run: yarn workspace @melodies/e2e playwright install-deps chromium
+      shell: bash
     - name: Install Chromium
       run: yarn workspace @melodies/e2e playwright install chromium
+      shell: bash

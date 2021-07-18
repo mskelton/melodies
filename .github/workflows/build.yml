@@ -42,6 +42,7 @@ jobs:
           heroku_app_name: melodies-web
           heroku_email: mdskelton99@gmail.com
   verify-deployment:
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
