@@ -1,9 +1,8 @@
 import { ApolloServer } from "apollo-server-koa"
-import { resolvers } from "./resolvers"
-import { schema as typeDefs } from "./schema"
+import { schema } from "./schema"
 
 export async function startApolloServer() {
-  const server = new ApolloServer({ resolvers, typeDefs })
+  const server = new ApolloServer({ schema })
   await server.start()
 
   return server

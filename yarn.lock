@@ -1815,6 +1815,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@melodies/service@workspace:service"
   dependencies:
+    "@apollo/client": ^3.3.21
+    "@graphql-tools/schema": ^7.1.5
     "@koa/router": ^10.0.0
     "@melodies/api": "workspace:api"
     "@melodies/web": "workspace:web"

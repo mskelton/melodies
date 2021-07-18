@@ -1,34 +1,5 @@
-import { gql } from "apollo-server-koa"
+import { makeExecutableSchema } from "@graphql-tools/schema"
+import { resolvers } from "./resolvers"
+import { typeDefs } from "./typeDefs"
 
-export const schema = gql`
-  type Line {
-    tabs: String
-    content: String
-  }
-
-  type Stanza {
-    type: String
-    lines: [Line]
-  }
-
-  type Song {
-    id: String
-    title: String
-    artist: String
-    stanzas: [Stanza]
-  }
-
-  type Collection {
-    id: String
-    title: String
-    description: String
-    image: String
-    songs: [Song]
-    songCount: Int
-  }
-
-  type Query {
-    collections: [Collection]
-    songs: [Song]
-  }
-`
+export const schema = makeExecutableSchema({ resolvers, typeDefs })
