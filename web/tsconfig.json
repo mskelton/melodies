@@ -2,7 +2,7 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "emitDeclarationOnly": false,
-    "module": "esnext",
+    "module": "commonjs",
     "outDir": "lib",
     "rootDir": "src",
     "tsBuildInfoFile": "lib/tsconfig.tsbuildinfo"
