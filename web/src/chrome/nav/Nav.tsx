@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, HStack, Icon } from "@chakra-ui/react"
+import { Flex, Heading, HStack, Icon } from "@chakra-ui/react"
 import React from "react"
 import { useTranslation } from "react-i18next"
 import { FaGithub, FaMusic } from "react-icons/fa"
