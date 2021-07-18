@@ -3,7 +3,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "start": "node dist/main.js",
+    "start": "node lib/main.js",
     "serve": "nodemon"
   },
   "peerDependencies": {
