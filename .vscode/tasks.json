@@ -9,23 +9,17 @@
       "path": "service/",
       "script": "serve",
       "isBackground": true,
-      "problemMatcher": [],
-      "presentation": {
-        "clear": true
-      }
+      "problemMatcher": []
     },
     {
       "label": "Start web app",
-      "detail": "snowpack dev",
+      "detail": "snowpack build --watch",
       "type": "npm",
       "group": "build",
       "path": "web/",
-      "script": "serve",
+      "script": "watch",
       "problemMatcher": [],
-      "isBackground": true,
-      "presentation": {
-        "clear": true
-      }
+      "isBackground": true
     },
     {
       "label": "Start development",
