@@ -4,20 +4,17 @@ import {
   NormalizedCacheObject,
 } from "@apollo/client"
 import { App } from "@melodies/web"
+import { Context } from "koa"
 import React from "react"
 import { StaticRouter } from "react-router-dom/server"
 import { FilledContext, HelmetProvider } from "react-helmet-async"
 
-export default function ServerApp({
-  client,
-  helmetContext,
-  url,
-}: ServerAppProps) {
+export function ServerApp({ client, ctx, helmetContext }: ServerAppProps) {
   return (
-    <StaticRouter location={url}>
+    <StaticRouter location={ctx.url}>
       <ApolloProvider client={client}>
         <HelmetProvider context={helmetContext}>
-          <App />
+          <App cookie={ctx.header.cookie ?? ""} />
         </HelmetProvider>
       </ApolloProvider>
     </StaticRouter>
@@ -26,6 +23,6 @@ export default function ServerApp({
 
 export interface ServerAppProps {
   client: ApolloClient<NormalizedCacheObject>
+  ctx: Context
   helmetContext: FilledContext
-  url: string
 }

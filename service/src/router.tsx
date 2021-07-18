@@ -5,7 +5,7 @@ import { renderToStaticMarkup } from "react-dom/server"
 import { FilledContext } from "react-helmet-async"
 import { createClient } from "./apollo/client"
 import { Html } from "./components/Html"
-import ServerApp from "./components/ServerApp"
+import { ServerApp } from "./components/ServerApp"
 
 export const router = new Router()
 
@@ -13,7 +13,7 @@ router.get("(.*)", async (ctx) => {
   const client = createClient()
   const helmetContext = {} as FilledContext
   const root = await renderToStringWithData(
-    <ServerApp client={client} helmetContext={helmetContext} url={ctx.url} />
+    <ServerApp client={client} ctx={ctx} helmetContext={helmetContext} />
   )
 
   const state = client.extract()
