@@ -1808,6 +1808,8 @@ __metadata:
   dependencies:
     "@playwright/test": ^1.12.3
     expect-playwright: ^0.7.2
+    fixtures: "link:./fixtures"
+    selectors: "link:./selectors"
   languageName: unknown
   linkType: soft
 
@@ -1819,6 +1821,7 @@ __metadata:
     "@graphql-tools/schema": ^7.1.5
     "@koa/router": ^10.0.0
     "@melodies/api": "workspace:api"
+    "@melodies/service": "workspace:service"
     "@melodies/web": "workspace:web"
     "@mskelton/tsconfig": ^1.0.2
     "@types/koa-static": ^4.0.2
@@ -5159,6 +5162,12 @@ __metadata:
   checksum: cd0b77415bc59e5af31e4e1b29c6ff8d965d9ca3c60a4b74161f8f116c0d1ad8d35bc6e53bf8f92c69e704e98183f1628a363ed7d519eb28eff54378b8f167a7
   languageName: node
   linkType: hard
+
+"fixtures@link:./fixtures::locator=%40melodies%2Fe2e%40workspace%3Ae2e":
+  version: 0.0.0-use.local
+  resolution: "fixtures@link:./fixtures::locator=%40melodies%2Fe2e%40workspace%3Ae2e"
+  languageName: node
+  linkType: soft
 
 "flat-cache@npm:^3.0.4":
   version: 3.0.4
@@ -8683,6 +8692,12 @@ resolve@^2.0.0-next.3:
   checksum: 2ba121e53e8a438394598612ec9a8f465b39157042f912d2dd5956af643e0d45ec6937ae4eeb0a807d1945b209515263aed12fc3bca95c7a027ec2a54e76b399
   languageName: node
   linkType: hard
+
+"selectors@link:./selectors::locator=%40melodies%2Fe2e%40workspace%3Ae2e":
+  version: 0.0.0-use.local
+  resolution: "selectors@link:./selectors::locator=%40melodies%2Fe2e%40workspace%3Ae2e"
+  languageName: node
+  linkType: soft
 
 "semver-diff@npm:^3.1.1":
   version: 3.1.1

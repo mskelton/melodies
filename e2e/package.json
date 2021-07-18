@@ -5,6 +5,8 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.12.3",
-    "expect-playwright": "^0.7.2"
+    "expect-playwright": "^0.7.2",
+    "fixtures": "link:./fixtures",
+    "selectors": "link:./selectors"
   }
 }

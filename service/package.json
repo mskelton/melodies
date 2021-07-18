@@ -1,7 +1,9 @@
 {
   "name": "@melodies/service",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node dist/main.js",
     "serve": "nodemon"
   },
   "peerDependencies": {
@@ -14,6 +16,7 @@
     "@apollo/client": "^3.3.21",
     "@graphql-tools/schema": "^7.1.5",
     "@koa/router": "^10.0.0",
+    "@melodies/service": "workspace:service",
     "@melodies/web": "workspace:web",
     "apollo-server-koa": "^3.0.1",
     "graphql": "^15.5.1",

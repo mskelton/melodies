@@ -3,9 +3,9 @@ import Router from "@koa/router"
 import React from "react"
 import { renderToStaticMarkup } from "react-dom/server"
 import { FilledContext } from "react-helmet-async"
-import { createClient } from "./apollo/client"
-import { Html } from "./components/Html"
-import { ServerApp } from "./components/ServerApp"
+import { createClient } from "../apollo/client"
+import { Html } from "../components/Html"
+import { ServerApp } from "../components/ServerApp"
 
 export const router = new Router()
 
