@@ -12,10 +12,12 @@ export function Nav() {
   return (
     <Flex as="nav" justifyContent="space-between" px="6" py="4" shadow="md">
       <Flex alignItems="center">
-        <Heading as="h1" d="flex" fontSize="2xl" mr="10">
-          <Icon as={FaMusic} color="blue.500" mt="1" />
-          <Box ml="4">{t("app-name")}</Box>
-        </Heading>
+        <Flex alignItems="center" mr="10">
+          <Icon as={FaMusic} boxSize="6" color="blue.500" mt="1" />
+          <Heading as="h1" fontSize="2xl" ml="4">
+            {t("app-name")}
+          </Heading>
+        </Flex>
 
         <HStack spacing="3">
           <NavButton end to="/">
