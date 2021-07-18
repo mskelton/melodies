@@ -1,13 +1,16 @@
-import { ApolloProvider } from "@apollo/client"
+import {
+  ApolloClient,
+  ApolloProvider,
+  NormalizedCacheObject,
+} from "@apollo/client"
 import { App } from "@melodies/web"
 import React from "react"
 import { StaticRouter } from "react-router-dom/server"
-import { createClient } from "../apollo/client"
 
-export default function ServerApp({ url }: ServerAppProps) {
+export default function ServerApp({ client, url }: ServerAppProps) {
   return (
     <StaticRouter location={url}>
-      <ApolloProvider client={createClient()}>
+      <ApolloProvider client={client}>
         <App />
       </ApolloProvider>
     </StaticRouter>
@@ -15,5 +18,6 @@ export default function ServerApp({ url }: ServerAppProps) {
 }
 
 export interface ServerAppProps {
-  url?: string
+  client: ApolloClient<NormalizedCacheObject>
+  url: string
 }

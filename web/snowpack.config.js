@@ -3,13 +3,7 @@
 
 /** @type {import("snowpack").SnowpackUserConfig} */
 module.exports = {
-  alias: {
-    "~": "./src",
-  },
-  mount: {
-    public: { static: true, url: "/" },
-    src: "/dist",
-  },
+  mount: { src: "/dist" },
   plugins: ["@snowpack/plugin-react-refresh"],
   routes: [
     {
