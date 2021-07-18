@@ -1,8 +1,12 @@
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
+    "emitDeclarationOnly": false,
     "module": "esnext",
-    "outDir": "lib"
+    "outDir": "lib",
+    "rootDir": "src",
+    "tsBuildInfoFile": "lib/tsconfig.tsbuildinfo"
   },
-  "include": ["src", "src/**/*.json"]
+  "include": ["src", "src/**/*.json"],
+  "references": [{ "path": "../api" }]
 }

@@ -8,6 +8,7 @@
     "rootDir": "src",
     "tsBuildInfoFile": "lib/tsconfig.tsbuildinfo"
   },
+  "references": [{ "path": "../api" }, { "path": "../web" }],
   "ts-node": {
     "transpileOnly": true
   }

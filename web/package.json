@@ -1,6 +1,7 @@
 {
   "name": "@melodies/web",
-  "main": "src/index.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "snowpack build",
     "watch": "snowpack build --watch"
