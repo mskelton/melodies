@@ -28,6 +28,7 @@ jobs:
         with:
           node-version: 14.x
       - uses: ./.github/actions/setup-playwright
+      - run: yarn ts
       - name: Run end-to-end tests
         run: yarn workspace @melodies/e2e test --project=e2e
   deploy:
@@ -50,5 +51,6 @@ jobs:
         with:
           node-version: 14.x
       - uses: ./.github/actions/setup-playwright
+      - run: yarn ts
       - name: Verify deployment
         run: yarn workspace @melodies/e2e test --project=smoke
