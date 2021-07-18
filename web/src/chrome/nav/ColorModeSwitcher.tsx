@@ -11,7 +11,8 @@ export function ColorModeSwitcher() {
 
   return (
     <NavIconButton
-      aria-label={t("color-switch-label", { context: colorMode })}
+      aria-label={t("color-mode-switch-label", { context: colorMode })}
+      data-testid="color-mode-switch"
       icon={<SwitchIcon />}
       onClick={toggleColorMode}
     />

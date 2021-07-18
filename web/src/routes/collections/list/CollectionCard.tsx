@@ -23,6 +23,7 @@ export function CollectionCard({ collection }: CollectionCardProps) {
       as="section"
       borderRadius="lg"
       borderWidth="1px"
+      data-testid="collection-card"
       maxW="sm"
       overflow="hidden"
     >
@@ -39,7 +40,14 @@ export function CollectionCard({ collection }: CollectionCardProps) {
           {t("song-count", { count: collection.songCount })}
         </Box>
 
-        <Heading fontWeight="semibold" isTruncated mb="2" mt="1" size="md">
+        <Heading
+          as="h1"
+          fontWeight="semibold"
+          isTruncated
+          mb="2"
+          mt="1"
+          size="md"
+        >
           <LinkOverlay as={Link} to={`/collections/${collection.id}`}>
             {collection.title}
           </LinkOverlay>

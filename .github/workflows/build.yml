@@ -27,12 +27,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14.x
-      - run: yarn install --immutable --immutable-cache
-      - name: Install Playwright deps
-        run: |
-          yarn workspace @melodies/e2e playwright install-deps chromium
-          yarn workspace @melodies/e2e playwright install chromium
-      - run: yarn workspace @melodies/e2e test
+      - uses: ./.github/actions/setup-playwright
+      - name: Run end-to-end tests
+        run: yarn workspace @melodies/e2e test --project=e2e
   deploy:
     needs: [lint, ts, e2e]
     if: github.ref == 'refs/heads/main'
@@ -44,3 +41,13 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: melodies-web
           heroku_email: mdskelton99@gmail.com
+  verify-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - uses: ./.github/actions/setup-playwright
+      - name: Verify deployment
+        run: yarn workspace @melodies/e2e test --project=smoke

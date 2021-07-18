@@ -8,8 +8,8 @@
   "nav": {
     "app-name": "Melodies",
     "open-github-repo": "Open on GitHub",
-    "color-switch-label_dark": "Switch to light mode",
-    "color-switch-label_light": "Switch to dark mode",
+    "color-mode-switch-label_dark": "Switch to light mode",
+    "color-mode-switch-label_light": "Switch to dark mode",
     "links": {
       "collections": "Collections",
       "songs": "Songs",

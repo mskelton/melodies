@@ -1,0 +1,11 @@
+name: Setup Playwright
+description: Installs Yarn dependencies, Chromium, and Playwright system dependencies.
+runs:
+  using: composite
+  steps:
+    - name: Install dependencies
+      run: yarn install --immutable --immutable-cache
+    - name: Install Playwright system dependencies
+      run: yarn workspace @melodies/e2e playwright install-deps chromium
+    - name: Install Chromium
+      run: yarn workspace @melodies/e2e playwright install chromium

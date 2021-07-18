@@ -8,6 +8,8 @@ export function Home() {
         description="Song book and instrument tabs when you are at home or on the go."
         title="Home - Melodies"
       />
+
+      <h1>Home</h1>
     </div>
   )
 }

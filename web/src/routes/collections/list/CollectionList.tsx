@@ -16,6 +16,8 @@ export function CollectionsList() {
         title="Collections - Melodies"
       />
 
+      <h1>Collections</h1>
+
       {loading ? (
         <Spinner />
       ) : error ? (

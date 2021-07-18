@@ -12,7 +12,7 @@ export function Nav() {
   return (
     <Flex as="nav" justifyContent="space-between" px="6" py="4" shadow="md">
       <Flex alignItems="center">
-        <Heading d="flex" fontSize="2xl" mr="10">
+        <Heading as="h1" d="flex" fontSize="2xl" mr="10">
           <Icon as={FaMusic} color="blue.500" mt="1" />
           <Box ml="4">{t("app-name")}</Box>
         </Heading>
