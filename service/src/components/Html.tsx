@@ -1,7 +1,8 @@
 import { NormalizedCacheObject } from "@apollo/client"
 import React from "react"
+import { HelmetData } from "react-helmet-async"
 
-export function Html({ children, state }: HtmlProps) {
+export function Html({ children, helmet, state }: HtmlProps) {
   const sanitizedState = JSON.stringify(state).replace(/</g, "\\u003c")
 
   return (
@@ -9,12 +10,9 @@ export function Html({ children, state }: HtmlProps) {
       <head>
         <meta charSet="UTF-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta
-          content="Song book and instrument tabs when you are at home or on the go."
-          name="description"
-        />
 
-        <title>Melodies</title>
+        {helmet.title.toComponent()}
+        {helmet.meta.toComponent()}
       </head>
       <body>
         <div dangerouslySetInnerHTML={{ __html: children }} id="root" />
@@ -31,5 +29,6 @@ export function Html({ children, state }: HtmlProps) {
 
 export interface HtmlProps {
   children: string
+  helmet: HelmetData
   state: NormalizedCacheObject
 }
