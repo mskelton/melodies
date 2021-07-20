@@ -1834,7 +1834,7 @@ __metadata:
     react-icons: ^4.2.0
     react-router: next
     react-router-dom: next
-    snowpack: ^3.8.1
+    snowpack: ^3.8.2
     ts-node: ^10.1.0
   peerDependencies:
     "@types/node": ">=16"
@@ -1900,8 +1900,8 @@ __metadata:
   linkType: hard
 
 "@npmcli/arborist@npm:^2.6.4":
-  version: 2.6.4
-  resolution: "@npmcli/arborist@npm:2.6.4"
+  version: 2.7.1
+  resolution: "@npmcli/arborist@npm:2.7.1"
   dependencies:
     "@npmcli/installed-package-contents": ^1.0.7
     "@npmcli/map-workspaces": ^1.0.2
@@ -1916,6 +1916,7 @@ __metadata:
     common-ancestor-path: ^1.0.1
     json-parse-even-better-errors: ^2.3.1
     json-stringify-nice: ^1.1.4
+    mkdirp: ^1.0.4
     mkdirp-infer-owner: ^2.0.0
     npm-install-checks: ^4.0.0
     npm-package-arg: ^8.1.0
@@ -1928,13 +1929,15 @@ __metadata:
     promise-call-limit: ^1.0.1
     read-package-json-fast: ^2.0.2
     readdir-scoped-modules: ^1.1.0
+    rimraf: ^3.0.2
     semver: ^7.3.5
+    ssri: ^8.0.1
     tar: ^6.1.0
     treeverse: ^1.0.4
     walk-up-path: ^1.0.0
   bin:
     arborist: bin/index.js
-  checksum: b4823a1cb25df9171d093bc58d5918a786ffb7c6708550cc15ae27c2592b77c320f2ff1e6eacea897c6c9a373fc4a39a70c8575004e00e980ee729fb7b70b082
+  checksum: 9d1a0b2517aefb1898264762dc28c3519eeea0d39b8211ccd4eda7bda682462470ad40148cb2ab44048e8d45cf44edf0205591c067b51a7217d9c4900cfbff81
   languageName: node
   linkType: hard
 
@@ -3803,9 +3806,9 @@ __metadata:
   linkType: hard
 
 "cjs-module-lexer@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "cjs-module-lexer@npm:1.2.1"
-  checksum: 5c41324f072e70bb6fd0be6e7d28905231cbf71a62f96fec79d232df51226cb9a0750cd785933d5afdecd8efebb50327fb395d6e0fc3b67fb370b8025b980c17
+  version: 1.2.2
+  resolution: "cjs-module-lexer@npm:1.2.2"
+  checksum: 0460b5ad6b759bb6fba0f36be2be8459ffebf7f7aa0868981732486528b4d78e33138e530cc9e728fbec3d76e59036a9bfca0dc7af59958007bd49e8f525c673
   languageName: node
   linkType: hard
 
@@ -6887,8 +6890,8 @@ fsevents@~2.1.2:
   linkType: hard
 
 "make-fetch-happen@npm:^9.0.1":
-  version: 9.0.3
-  resolution: "make-fetch-happen@npm:9.0.3"
+  version: 9.0.4
+  resolution: "make-fetch-happen@npm:9.0.4"
   dependencies:
     agentkeepalive: ^4.1.3
     cacache: ^15.2.0
@@ -6906,7 +6909,7 @@ fsevents@~2.1.2:
     promise-retry: ^2.0.1
     socks-proxy-agent: ^5.0.0
     ssri: ^8.0.0
-  checksum: c93ac9c6f492ae8ba89f8f69c1888ac7c3841f2d816ed100c575f795b4efb5f2fa6935842865626e95d39c72966736f82cf561420d1e2435d722871458349ffd
+  checksum: a638682ff04567d69f38770d31644c29afa0d48b5c4f993fdc72b1096788e3cca4122abeee6e730698d4b1af721f5e74096fdbc6cf4187fc05528a20a94e3a14
   languageName: node
   linkType: hard
 
@@ -7065,8 +7068,8 @@ fsevents@~2.1.2:
   linkType: hard
 
 "minipass-fetch@npm:^1.3.0, minipass-fetch@npm:^1.3.2":
-  version: 1.3.3
-  resolution: "minipass-fetch@npm:1.3.3"
+  version: 1.3.4
+  resolution: "minipass-fetch@npm:1.3.4"
   dependencies:
     encoding: ^0.1.12
     minipass: ^3.1.0
@@ -7075,7 +7078,7 @@ fsevents@~2.1.2:
   dependenciesMeta:
     encoding:
       optional: true
-  checksum: cc93f86391795279b5681a2bbd5bb55cceabdae959c4ff0cb85e767427edb0d7e8bde49b6897afd386c2e47965ecc304b96bb7c2af0dbb9da7dfa67da140757e
+  checksum: c1a3d2b7a6082641601648ba309d1f878aaf6cb3f39f1468981dfe1fd30b96de8a0926128d4c2bff24aced21aff599f6fff8611a0084641d171063c6099d855d
   languageName: node
   linkType: hard
 
@@ -8723,8 +8726,8 @@ resolve@^2.0.0-next.3:
   linkType: hard
 
 "rollup@npm:^2.23.0":
-  version: 2.53.1
-  resolution: "rollup@npm:2.53.1"
+  version: 2.53.2
+  resolution: "rollup@npm:2.53.2"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -8732,7 +8735,7 @@ resolve@^2.0.0-next.3:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 7c63a7251e87715795a4141371f4f7b31ce46c7dd8273a0f4b5240977eb7ecaddd1e8d0fdaf8eabfc7cf73075cc9d83e03c67b89e56f31a2e85cf1089e9fc34f
+  checksum: 41d32b1d44066f3e8eeb5239013397e3df74dbb37489aaa77f8357059b5998cb4af0108fb72b048d265ae5d88de933b0732007c07e5d5687f5ee3ae44fab9eee
   languageName: node
   linkType: hard
 
@@ -8993,9 +8996,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"snowpack@npm:^3.8.1":
-  version: 3.8.1
-  resolution: "snowpack@npm:3.8.1"
+"snowpack@npm:^3.8.2":
+  version: 3.8.2
+  resolution: "snowpack@npm:3.8.2"
   dependencies:
     "@npmcli/arborist": ^2.6.4
     bufferutil: ^4.0.2
@@ -9054,7 +9057,7 @@ resolve@^2.0.0-next.3:
   bin:
     snowpack: index.bin.js
     sp: index.bin.js
-  checksum: 0a178e9f1c1da141baab79f1657ec84558daaed9f16bf4464d7d73e0191ce1922886941b408714e87589517c124874d6d162952b7b82ff45111676e61ea24aa2
+  checksum: eeea1eeca8e8723d8ed2eaff7f8d7ea6c2861780b8095f708817e981cefcd400decb88661e1679b227ab73d14f5ccf6f4f8cd3dc9a200d598d92075bfea655e5
   languageName: node
   linkType: hard
 
