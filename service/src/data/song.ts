@@ -1,4 +1,4 @@
-import { Song } from "@melodies/api"
+import type { Song } from "@melodies/api"
 
 export const songs: Song[] = [
   {

@@ -1,5 +1,5 @@
 import { gql, useQuery } from "@apollo/client"
-import { Collection } from "@melodies/api"
+import type { Collection } from "@melodies/api"
 
 const query = gql`
   query GetCollections {
