@@ -6,20 +6,31 @@
       "detail": "nodemon",
       "type": "npm",
       "group": "build",
-      "path": "service/",
+      "path": "web/",
       "script": "serve",
-      "isBackground": true,
-      "problemMatcher": []
+      "problemMatcher": [],
+      "isBackground": true
     },
     {
-      "label": "Start web app",
+      "label": "Watch bundle",
       "detail": "snowpack build --watch",
       "type": "npm",
       "group": "build",
       "path": "web/",
-      "script": "watch",
+      "script": "build:watch",
       "problemMatcher": [],
       "isBackground": true
+    },
+    {
+      "label": "Start development",
+      "detail": "Start the service and bundle watcher",
+      "dependsOn": ["Watch bundle", "Start service"],
+      "dependsOrder": "parallel",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
