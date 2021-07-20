@@ -1,12 +1,10 @@
-import { createServer } from "./server"
+import { ApolloServer } from "apollo-server"
+import { resolvers } from "./resolvers"
+import { typeDefs } from "./typeDefs"
 
-async function main() {
-  const app = await createServer()
-  const port = process.env.PORT || 4000
+const server = new ApolloServer({ resolvers, typeDefs })
+const port = process.env.PORT || 4000
 
-  app.listen({ port }, () => {
-    console.log(`🚀 Server ready at http://localhost:${port}`)
-  })
-}
-
-main().catch(() => process.exit(1))
+server.listen({ port }).then(({ url }) => {
+  console.log(`🚀 Server is ready at ${url}`)
+})
