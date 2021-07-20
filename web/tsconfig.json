@@ -8,5 +8,8 @@
     "tsBuildInfoFile": "lib/tsconfig.tsbuildinfo"
   },
   "include": ["src", "src/**/*.json"],
-  "references": [{ "path": "../api" }]
+  "references": [{ "path": "../api" }],
+  "ts-node": {
+    "transpileOnly": true
+  }
 }

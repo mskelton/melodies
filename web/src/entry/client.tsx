@@ -1,8 +1,8 @@
 import React from "react"
 import { hydrate } from "react-dom"
 import { BrowserRouter } from "react-router-dom"
-import { App } from "./App"
-import { client } from "./api/client"
+import { client } from "../api/client"
+import { App } from "../components/App"
 
 hydrate(
   <React.StrictMode>

@@ -1,4 +1,4 @@
-import "./i18n"
+import "../utils/i18n"
 import {
   ApolloClient,
   ApolloProvider,
@@ -7,12 +7,12 @@ import {
 import React from "react"
 import { FilledContext, HelmetProvider } from "react-helmet-async"
 import { Route, Routes } from "react-router-dom"
-import { PageContent } from "./chrome/PageContent"
-import { Nav } from "./chrome/nav/Nav"
-import { Chakra } from "./components/Chakra"
-import { CollectionDetail } from "./routes/collections/detail/CollectionDetail"
-import { CollectionsList } from "./routes/collections/list/CollectionList"
-import { Home } from "./routes/home/Home"
+import { PageContent } from "../chrome/PageContent"
+import { Nav } from "../chrome/nav/Nav"
+import { CollectionDetail } from "../routes/collections/detail/CollectionDetail"
+import { CollectionsList } from "../routes/collections/list/CollectionList"
+import { Home } from "../routes/home/Home"
+import { Chakra } from "./Chakra"
 
 export function App({ client, cookie, helmetContext }: AppProps) {
   return (
