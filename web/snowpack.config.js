@@ -3,6 +3,7 @@
 
 /** @type {import("snowpack").SnowpackUserConfig} */
 module.exports = {
+  exclude: ["**/node_modules/**/*", "src/server/**"],
   mount: { src: "/dist" },
   plugins: ["@snowpack/plugin-react-refresh"],
   routes: [

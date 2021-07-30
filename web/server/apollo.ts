@@ -1,10 +1,10 @@
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client"
 import fetch from "cross-fetch"
-import { isProd } from "../utils/env"
 
-const uri = isProd
-  ? "https://melodies-api.herokuapp.com"
-  : "http://localhost:4000"
+const uri =
+  process.env.NODE_ENV === "production"
+    ? "https://melodies-api.herokuapp.com"
+    : "http://localhost:4000"
 
 /**
  * Creates a new `ApolloClient` instance for server-side rendering of the app.

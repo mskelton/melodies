@@ -1,7 +1,7 @@
 import { Context } from "koa"
 import React from "react"
 import { StaticRouter } from "react-router-dom/server"
-import { App, AppProps } from "../App"
+import { App, AppProps } from "../../components/App"
 
 export function ServerApp({ ctx, ...props }: ServerAppProps) {
   return (

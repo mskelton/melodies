@@ -3,11 +3,11 @@ import { Middleware } from "koa"
 import React from "react"
 import { renderToStaticMarkup } from "react-dom/server"
 import { FilledContext } from "react-helmet-async"
-import { Html } from "../components/server/Html"
-import { ServerApp } from "../components/server/ServerApp"
 import { createClient } from "./apollo"
+import { Html } from "./components/Html"
+import { ServerApp } from "./components/ServerApp"
 
-export const ssrMiddleware: Middleware = async (ctx) => {
+export const ssr: Middleware = async (ctx) => {
   const client = createClient()
   const helmetContext = {} as FilledContext
   const root = await renderToStringWithData(

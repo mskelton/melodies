@@ -4,10 +4,10 @@
     "emitDeclarationOnly": false,
     "module": "commonjs",
     "outDir": "lib",
-    "rootDir": "src",
+    "rootDir": "client",
     "tsBuildInfoFile": "lib/tsconfig.tsbuildinfo"
   },
-  "include": ["src", "src/**/*.json"],
+  "include": ["client", "client/**/*.json"],
   "references": [{ "path": "../api" }],
   "ts-node": {
     "transpileOnly": true
