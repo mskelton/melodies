@@ -4,14 +4,10 @@ jobs:
   format:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: mskelton/setup-yarn@master
         with:
+          flags: --immutable
           ref: ${{ github.head_ref }}
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14.x
-          cache: yarn
-      - run: yarn install --immutable
       - run: yarn format
       - run: yarn lint --fix || exit 0
       - name: Commit changes

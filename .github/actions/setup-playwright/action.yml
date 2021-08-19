@@ -3,9 +3,10 @@ description: Installs Yarn dependencies, Chromium, and Playwright system depende
 runs:
   using: composite
   steps:
-    - name: Install dependencies
-      run: yarn install --immutable --immutable-cache
-      shell: bash
+    - name: Setup Yarn
+      uses: mskelton/setup-yarn@master
+      with:
+        flags: --immutable
     - name: Install Playwright system dependencies
       run: yarn workspace @melodies/e2e playwright install-deps chromium
       shell: bash

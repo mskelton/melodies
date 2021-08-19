@@ -4,29 +4,21 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: mskelton/setup-yarn@master
         with:
-          node-version: 14.x
-      - run: yarn install --immutable --immutable-cache
+          flags: --immutable
       - run: yarn prettier --check .
       - run: yarn lint
   ts:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: mskelton/setup-yarn@master
         with:
-          node-version: 14.x
-      - run: yarn install --immutable --immutable-cache
+          flags: --immutable
       - run: yarn ts
   e2e:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14.x
       - name: Setup Playwright
         uses: ./.github/actions/setup-playwright
       - run: yarn ts
@@ -47,10 +39,6 @@ jobs:
     needs: deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14.x
       - name: Setup Playwright
         uses: ./.github/actions/setup-playwright
       - run: yarn ts
