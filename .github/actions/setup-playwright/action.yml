@@ -4,7 +4,7 @@ runs:
   using: composite
   steps:
     - name: Setup Yarn
-      uses: mskelton/setup-yarn@master
+      uses: mskelton/setup-yarn@main
       with:
         flags: --immutable
     - name: Install Playwright system dependencies

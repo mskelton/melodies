@@ -4,7 +4,7 @@ jobs:
   format:
     runs-on: ubuntu-latest
     steps:
-      - uses: mskelton/setup-yarn@master
+      - uses: mskelton/setup-yarn@main
         with:
           flags: --immutable
           ref: ${{ github.head_ref }}

@@ -4,7 +4,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: mskelton/setup-yarn@master
+      - uses: mskelton/setup-yarn@main
         with:
           flags: --immutable
       - run: yarn prettier --check .
@@ -12,7 +12,7 @@ jobs:
   ts:
     runs-on: ubuntu-latest
     steps:
-      - uses: mskelton/setup-yarn@master
+      - uses: mskelton/setup-yarn@main
         with:
           flags: --immutable
       - run: yarn ts
