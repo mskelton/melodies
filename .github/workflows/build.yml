@@ -19,6 +19,10 @@ jobs:
   e2e:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Yarn
+        uses: mskelton/setup-yarn@main
+        with:
+          flags: --immutable
       - name: Setup Playwright
         uses: ./.github/actions/setup-playwright
       - run: yarn ts
@@ -39,6 +43,10 @@ jobs:
     needs: deploy
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Yarn
+        uses: mskelton/setup-yarn@main
+        with:
+          flags: --immutable
       - name: Setup Playwright
         uses: ./.github/actions/setup-playwright
       - run: yarn ts
