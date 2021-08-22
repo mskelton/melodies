@@ -4,9 +4,9 @@ jobs:
   format:
     runs-on: ubuntu-latest
     steps:
-      - uses: mskelton/setup-yarn@main
+      - uses: mskelton/setup-yarn@v1
         with:
-          flags: --immutable
+          flags: --immutable-cache
           ref: ${{ github.head_ref }}
       - run: yarn format
       - run: yarn lint --fix || exit 0

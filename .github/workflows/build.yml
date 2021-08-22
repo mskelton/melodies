@@ -4,25 +4,24 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: mskelton/setup-yarn@main
+      - uses: mskelton/setup-yarn@v1
         with:
-          flags: --immutable
+          flags: --immutable-cache
       - run: yarn prettier --check .
       - run: yarn lint
   ts:
     runs-on: ubuntu-latest
     steps:
-      - uses: mskelton/setup-yarn@main
+      - uses: mskelton/setup-yarn@v1
         with:
-          flags: --immutable
+          flags: --immutable-cache
       - run: yarn ts
   e2e:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Yarn
-        uses: mskelton/setup-yarn@main
+      - uses: mskelton/setup-yarn@v1
         with:
-          flags: --immutable
+          flags: --immutable-cache
       - name: Setup Playwright
         uses: ./.github/actions/setup-playwright
       - run: yarn ts
@@ -43,10 +42,9 @@ jobs:
     needs: deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Yarn
-        uses: mskelton/setup-yarn@main
+      - uses: mskelton/setup-yarn@v1
         with:
-          flags: --immutable
+          flags: --immutable-cache
       - name: Setup Playwright
         uses: ./.github/actions/setup-playwright
       - run: yarn ts
